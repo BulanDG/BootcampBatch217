@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BootcampBatch217</string>
+    <string name="versi_aplikasoi">Versi 1.0</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="term_and_condition">Dengan melakukan registrasi,
+        berarti anda telah menyetujui segala syarat dan ketentuan T&amp;C
+        yang berlaku pada aplikasi. Silahkan checklist jika anda setuju
+        untuk melanjutkan proses registrasi!
+    </string>
+
+    <string-array name="gelar_pendidikan">
+        <item>-Pilih Pendidikan-</item>
+        <item>SMP</item>
+        <item>SMA</item>
+        <item>D3</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+</resources>

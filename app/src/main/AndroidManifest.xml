@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.bootcampbatch217">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".mahasiswa.DetailMahasiswaActivity"></activity>
+        <activity android:name=".mahasiswa.EditDataMahasiswaActivity" />
+        <activity android:name=".mahasiswa.InputDataMahasiswaActivity" />
+        <activity android:name=".mahasiswa.DaftarMahasiswaActivity" />
+        <activity android:name=".menus.SQLiteSatuActivity" />
+        <activity android:name=".menus.EsafirmActivity" />
+        <activity android:name=".menus.GalleryActivity" />
+        <activity android:name=".menus.CameraActivity" />
+        <activity android:name=".menus.ImageSliderActivity" />
+        <activity android:name=".menus.TabbedMenuActivity" />
+        <activity
+            android:name=".menus.RetrofitPostActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".menus.RetrofitActivity" />
+        <activity android:name=".menus.MultiLevelParsingActivity" />
+        <activity android:name=".menus.DetailPhotoActivity" />
+        <activity android:name=".menus.AdvanceParsingActivity" />
+        <activity android:name=".menus.GlideActivity" />
+        <activity android:name=".menus.PicassoActivity" />
+        <activity android:name=".menus.VolleyJSONParsingActivity" />
+        <activity android:name=".menus.VolleyActivity" />
+        <activity android:name=".menus.ListViewActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait">
+
+            <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
+            <!--  -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+    </application>
+
+</manifest>

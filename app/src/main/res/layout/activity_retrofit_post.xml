@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menus.RetrofitPostActivity"
+    android:orientation="vertical"
+    android:id="@+id/contentCreateUser">
+
+    <EditText
+        android:id="@+id/inputNamaUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Input Nama"/>
+
+    <EditText
+        android:id="@+id/inputJobUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Input Pekerjaan"/>
+        <!--android:imeOptions="actionDone"-->
+        <!--android:inputType="textImeMultiLine"-->
+
+    <EditText
+        android:id="@+id/inputIdUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Input ID"/>
+    <Button
+        android:id="@+id/buttonSubmitData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Data"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/buttonPutData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Put Data"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/buttonPatchData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patch Data"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
