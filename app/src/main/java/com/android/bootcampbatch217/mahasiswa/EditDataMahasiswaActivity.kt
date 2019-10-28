@@ -27,8 +27,6 @@ class EditDataMahasiswaActivity : AppCompatActivity() {
     val databaseHelper= DatabaseMahasiswaHelper(context)
     var ID_BIODATA=0
     var imagePath:String= ""
-    //coba commit
-    var coba=""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,21 +109,21 @@ class EditDataMahasiswaActivity : AppCompatActivity() {
                                   foto:String){
 
         //cara 1 rawquery
-
         val db =databaseHelper!!.writableDatabase
-        /*
-      val queryUpdate ="UPDATE $TABEL_BIODATA " +
-              "SET " +
-              "$NIM=$nim, " +
-              "$NAMA='$namaLengkap'," +
-              "$GENDER='$gender'," +
-              "$TANGGAL_LAHIR='$tanggalLahir'," +
-              "$ALAMAT='$alamat'," +
-              "$JURUSAN='$jurusan'," +
-              "$PATH_FOTO='$foto'" +
-              "WHERE $ID=$id"
 
-      db.execSQL(queryUpdate)
+        /*
+          val queryUpdate ="UPDATE $TABEL_BIODATA " +
+                  "SET " +
+                  "$NIM=$nim, " +
+                  "$NAMA='$namaLengkap'," +
+                  "$GENDER='$gender'," +
+                  "$TANGGAL_LAHIR='$tanggalLahir'," +
+                  "$ALAMAT='$alamat'," +
+                  "$JURUSAN='$jurusan'," +
+                  "$PATH_FOTO='$foto'" +
+                  "WHERE $ID=$id"
+
+          db.execSQL(queryUpdate)
       */
 
         //cara 2 content values

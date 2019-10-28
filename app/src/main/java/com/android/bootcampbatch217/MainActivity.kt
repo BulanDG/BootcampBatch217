@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AlertDialogLayout
 import com.android.bootcampbatch217.mahasiswa.DaftarMahasiswaActivity
 import com.android.bootcampbatch217.menus.*
+import com.android.bootcampbatch217.perpustakaan.PerpustakaanActivity
 import com.android.bootcampbatch217.utilities.EXTRA_PASSWORD
 import com.android.bootcampbatch217.utilities.EXTRA_USERNAME
 import com.android.bootcampbatch217.utilities.SessionManager
@@ -116,6 +117,12 @@ class MainActivity : AppCompatActivity() {
         //menu 15
         menu15.setOnClickListener{
             val intent=Intent(context,DaftarMahasiswaActivity::class.java)
+            startActivity(intent)
+        }
+
+        //menu 16
+        menu16.setOnClickListener{
+            val intent=Intent(context,PerpustakaanActivity::class.java)
             startActivity(intent)
         }
     }
