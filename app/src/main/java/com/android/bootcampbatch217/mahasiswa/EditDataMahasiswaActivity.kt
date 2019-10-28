@@ -27,6 +27,8 @@ class EditDataMahasiswaActivity : AppCompatActivity() {
     val databaseHelper= DatabaseMahasiswaHelper(context)
     var ID_BIODATA=0
     var imagePath:String= ""
+    //coba commit
+    var coba=""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
