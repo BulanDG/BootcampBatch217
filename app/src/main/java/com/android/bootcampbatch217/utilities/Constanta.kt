@@ -20,6 +20,14 @@ val ARRAY_HOBI= arrayOf(
     "Baca Buku",
     "Nonton TV")
 
+val ARRAY_JURUSAN = arrayOf(
+    "-Pilih Jurusan-",
+    "INFORMATIKA",
+    "TEKNIK KOMPUTER",
+    "HUKUM",
+    "PSIKOLOGI",
+    "MANAJEMEN BISNIS")
+
 //konstanta khusus database
 val TABEL_BIODATA ="biodata"
 val ID="id"

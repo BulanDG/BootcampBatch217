@@ -51,7 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="L/P"
-                android:inputType="text" />
+                android:inputType="text"
+                android:maxLength="1"/>
             <TextView
                 android:id="@+id/tanggalLahirMahasiswa"
                 android:layout_width="match_parent"
@@ -75,7 +76,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:background="@drawable/icon_profile" />
+                android:src="@drawable/icon_profile" />
 
             <Spinner
                 android:id="@+id/inputJurusanMahasiswa"

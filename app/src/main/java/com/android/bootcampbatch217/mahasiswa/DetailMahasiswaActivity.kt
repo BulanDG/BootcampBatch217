@@ -27,34 +27,35 @@ class DetailMahasiswaActivity : AppCompatActivity() {
 
     }
 
-    fun readDetailMahasiswa(id:Int){
-        val db= databaseHelper.readableDatabase
+    fun readDetailMahasiswa(id: Int){
+        val db = databaseHelper.readableDatabase
 
-        //baca data ->rawquery
+        //cara raw query CARA 1
+        // val queryRead = "SELECT * FROM '$TABEL_BIODATA' WHERE $ID=$id"
+        // val cursor = db.rawQuery(queryRead, null)
 
-//        val queryRead="SELECT * FROM '$TABEL_BIODATA' WHERE $ID=$id"
-//        val cursor=db.rawQuery(queryRead,null)
-
-        //baca data ->projection
-        val projection = arrayOf<String>(ID, NIM,
-            NAMA, GENDER, TANGGAL_LAHIR, ALAMAT, JURUSAN, PATH_FOTO
-        )
-        val cursor= db.query(TABEL_BIODATA,projection,null,null,null,null,null)
+        //cara projection CARA 2
+        val projection = arrayOf<String>(ID,NIM, NAMA, GENDER, TANGGAL_LAHIR, ALAMAT, JURUSAN, PATH_FOTO)
+        val selection = ID + "=?"
+        val selectionArgs= arrayOf(id.toString())
+        val cursor= db.query(TABEL_BIODATA,projection,selection,selectionArgs,null,null,null)
         if(cursor!!.count==1){
+            //data ditemukan
             cursor.moveToFirst()
-            labelNamaMahasiswa.text = cursor.getString(2)
-            labelNIMMahasiswa.text=cursor.getInt(1).toString()
-            labelTanggalLahir.text=cursor.getString(4)
-            labelGenderMahasisw.text=cursor.getString(3)
-            labelJurusanMahasiswa.text=cursor.getString(6)
 
+            labelNamaMahasiswa.text = cursor.getString(2)
+            labelNIMMahasiswa.text = cursor.getInt(1).toString()
+            labelTanggalLahir.text = cursor.getString(4)
+            labelGenderMahasisw.text = cursor.getString(3)
+            labelJurusanMahasiswa.text = cursor.getString(6)
+            labelAlamatMahasiswa.text = cursor.getString(5)
 
             val imagePath = cursor.getString(7)
             Glide.with(context).load(imagePath).into(fotoProfilMahasiswa)
-
-        }else{
-            Toast.makeText(context,"Data mahasiswa tidak ditemukan!",Toast.LENGTH_SHORT)
         }
-
+        else{
+            //data tidak ditemukan
+            Toast.makeText(context, "Data Mahasiswa Tidak Ditemukan!", Toast.LENGTH_SHORT).show()
+        }
     }
 }

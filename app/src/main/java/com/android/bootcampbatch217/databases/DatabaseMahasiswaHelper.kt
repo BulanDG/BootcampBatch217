@@ -30,7 +30,7 @@ class DatabaseMahasiswaHelper(context: Context):
 
         //preload data 1 record
         val queryInsert= "INSERT INTO '$TABEL_BIODATA' ($NIM,$NAMA,$GENDER,$TANGGAL_LAHIR,$ALAMAT,$JURUSAN,$PATH_FOTO) " +
-                "VALUES (123456,'Peter parker','L','01/10.1975','Newyork City','Hukum','-')"
+                "VALUES (123456,'Peter parker','L','01/10/1975','Newyork City','Hukum','-')"
 
         db!!.execSQL(queryInsert)
     }

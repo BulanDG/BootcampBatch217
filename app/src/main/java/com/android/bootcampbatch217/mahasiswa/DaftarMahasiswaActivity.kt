@@ -66,4 +66,18 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
         listNamaMahasiswa.adapter =adapterListMahasiswa
         adapterListMahasiswa.notifyDataSetChanged()
     }
+
+    fun refreshList(){
+        println("Refresh List>>>>")
+        namaMahasiswa=ArrayList<String>()
+        idMahasiswa=ArrayList<Int>()
+
+        readDataMahasiswa()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        refreshList()
+    }
 }
