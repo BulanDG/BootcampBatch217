@@ -125,6 +125,24 @@ class MainActivity : AppCompatActivity() {
             val intent=Intent(context,PerpustakaanActivity::class.java)
             startActivity(intent)
         }
+
+        //menu 17
+        menu17.setOnClickListener{
+            val intent=Intent(context,LocationTrackingActivity::class.java)
+            startActivity(intent)
+        }
+
+        //menu 18
+        menu18.setOnClickListener{
+            val intent=Intent(context,AirLocationActivity::class.java)
+            startActivity(intent)
+        }
+
+        //menu 19
+        menu19.setOnClickListener{
+            val intent=Intent(context,MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun cekUserNamePasswordDariSessionManager(){

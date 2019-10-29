@@ -54,4 +54,21 @@ class DatabasePerpustakaanQueryHelper(val databaseHelper: DatabasePerpustakaanHe
 
         return listBuku
     }
+
+    fun cariBukuModels(keyword:String): List<Buku>{
+        var listBuku = ArrayList<Buku>()
+
+        val db = databaseHelper.readableDatabase
+        val queryCari = "SELECT * FROM $NAMA_TABEL_BUKU WHERE $FIELD_JUDUL LIKE '%$keyword%' OR " +
+                "$FIELD_KATEGORI LIKE '%$keyword%' OR " +
+                "$FIELD_PENGARANG LIKE '%$keyword%' OR " +
+                "$FIELD_PENERBIT LIKE '%$keyword%'"
+
+        val cursor =db.rawQuery(queryCari,null)
+        if(cursor.count > 0){
+            listBuku = konversiCursorKeListBukuModel(cursor)
+        }
+
+        return listBuku
+    }
 }

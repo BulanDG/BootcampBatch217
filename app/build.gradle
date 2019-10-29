@@ -30,6 +30,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
@@ -66,5 +67,11 @@ dependencies {
     //esafirm -> handle multiple image picker
     implementation 'com.github.esafirm.android-image-picker:imagepicker:1.13.1'
     implementation 'com.github.esafirm.android-image-picker:rximagepicker:1.13.1'
+
+    //implementasi google playservices (detect location)
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    //lib AirLocation u/ get location
+    implementation 'com.github.mumayank:AirLocation:1.2'
 
 }
