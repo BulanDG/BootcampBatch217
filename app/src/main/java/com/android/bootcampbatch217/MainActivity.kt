@@ -1,20 +1,26 @@
 package com.android.bootcampbatch217
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AlertDialogLayout
 import com.android.bootcampbatch217.mahasiswa.DaftarMahasiswaActivity
 import com.android.bootcampbatch217.menus.*
 import com.android.bootcampbatch217.perpustakaan.PerpustakaanActivity
+import com.android.bootcampbatch217.room.RoomWordActivity
 import com.android.bootcampbatch217.utilities.EXTRA_PASSWORD
 import com.android.bootcampbatch217.utilities.EXTRA_USERNAME
 import com.android.bootcampbatch217.utilities.SessionManager
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     val context=this
+    var counter_back = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -143,6 +149,12 @@ class MainActivity : AppCompatActivity() {
             val intent=Intent(context,MapsActivity::class.java)
             startActivity(intent)
         }
+
+        //menu 21
+        menu21.setOnClickListener{
+            val intent=Intent(context,RoomWordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun cekUserNamePasswordDariSessionManager(){
@@ -190,6 +202,47 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        counter_back=1
+    }
+
+    override fun onBackPressed() {
+        //super.onBackPressed() //menonaktifkan super on backpress
+        //cara dialog konfirmasi
+        /*
+        val konfirmasi = AlertDialog.Builder(context)
+            konfirmasi.setMessage("Anda Yakin mau keluar dari aplikasi ini?")
+                .setPositiveButton("Ya",DialogInterface.OnClickListener{
+                    dialoInterface, i ->
+                    finish()
+                })
+                .setNegativeButton("Tidak", DialogInterface.OnClickListener{
+                    dialogInterface, i ->
+                   dialogInterface.cancel()
+                })
+                .setCancelable(false)
+        konfirmasi.create().show()
+        */
+
+        //cara lain
+        if(counter_back<2){
+            Toast.makeText(context,"Tekan 1x lagi keluar aplikasi",Toast.LENGTH_SHORT).show()
+            counter_back++
+
+            countDownReset()
+        }else if(counter_back == 2){
+           finish()
+        }
+    }
+
+    fun countDownReset(){
+        val timerTask = object :TimerTask(){
+            override fun run() {
+                counter_back=1
+            }
+        }
+
+        val timer =Timer()
+            timer.schedule(timerTask,1000)
     }
 
 }

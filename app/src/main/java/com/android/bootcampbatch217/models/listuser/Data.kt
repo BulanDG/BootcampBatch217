@@ -1,3 +1,5 @@
+package com.android.bootcampbatch217.models.listuser
+
 import com.google.gson.annotations.SerializedName
 
 /*

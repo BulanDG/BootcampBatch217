@@ -1,12 +1,12 @@
 package com.android.bootcampbatch217.menus
 
-import CreateUserModel
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.android.bootcampbatch217.R
+import com.android.bootcampbatch217.models.createuser.CreateUserModel
 import com.android.bootcampbatch217.models.patchuser.PatchUserModel
 import com.android.bootcampbatch217.models.putuser.PutUserModel
 import com.android.bootcampbatch217.retrofit_utilities.APIUtilities

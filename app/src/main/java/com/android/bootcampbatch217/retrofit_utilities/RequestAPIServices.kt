@@ -1,7 +1,7 @@
 package com.android.bootcampbatch217.retrofit_utilities
 
-import CreateUserModel
-import ListUserModel
+import com.android.bootcampbatch217.models.createuser.CreateUserModel
+import com.android.bootcampbatch217.models.listuser.ListUserModel
 import com.android.bootcampbatch217.models.patchuser.PatchUserModel
 import com.android.bootcampbatch217.models.putuser.PutUserModel
 import retrofit2.Call

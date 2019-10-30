@@ -1,7 +1,6 @@
 package com.android.bootcampbatch217.menus
 
-import Data
-import ListUserModel
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.bootcampbatch217.R
 import com.android.bootcampbatch217.adapters.ListUserRecyclerAdapter
+import com.android.bootcampbatch217.models.listuser.Data
+import com.android.bootcampbatch217.models.listuser.ListUserModel
 import com.android.bootcampbatch217.retrofit_utilities.APIUtilities
 import com.android.bootcampbatch217.retrofit_utilities.RequestAPIServices
 import com.ethanhua.skeleton.RecyclerViewSkeletonScreen

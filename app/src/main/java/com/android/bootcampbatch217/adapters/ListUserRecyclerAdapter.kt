@@ -1,11 +1,12 @@
 package com.android.bootcampbatch217.adapters
 
-import Data
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.bootcampbatch217.R
+import com.android.bootcampbatch217.models.listuser.Data
 import com.android.bootcampbatch217.viewholders.ViewHolderListUserRecycler
 import com.google.android.material.snackbar.Snackbar
 

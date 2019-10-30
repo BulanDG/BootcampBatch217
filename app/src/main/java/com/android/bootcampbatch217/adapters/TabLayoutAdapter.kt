@@ -8,13 +8,13 @@ import com.android.bootcampbatch217.fragments.FragmentDua
 import com.android.bootcampbatch217.fragments.FragmentSatu
 import com.android.bootcampbatch217.fragments.FragmentTiga
 
-class TabLayoutAdapter(context: Context, fm:FragmentManager?) : FragmentPagerAdapter(fm) {
-    override fun getItem(position: Int): Fragment? {
+class TabLayoutAdapter(context: Context, fm:FragmentManager) : FragmentPagerAdapter(fm) {
+    override fun getItem(position: Int): Fragment {
         return when(position){
             0->FragmentSatu()
             1->FragmentDua()
             2->FragmentTiga()
-            else -> null
+            else -> Fragment()
         }
     }
 

@@ -1,3 +1,4 @@
+package com.android.bootcampbatch217.models.createuser
 import com.google.gson.annotations.SerializedName
 
 /*
